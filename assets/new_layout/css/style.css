@@ -1,0 +1,307 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: #5a5d5a;
+}
+.wrapping {
+	overflow: hidden;
+}
+/* Common CSS */
+
+a:hover {
+	text-decoration: none;
+}
+.common-btn a {
+	display: inline-block;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	border-radius: 6px;
+	border: 1px solid #fff;
+	position: relative;
+}
+.common-btn a:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 100%;
+	bottom: 0;
+	content: '';
+	background: #1293d4;
+	border-radius: 6px;
+	transition: .5s;
+	z-index: -1;
+}
+.common-btn a:hover:after{
+	right: 0;
+}
+
+
+
+
+
+
+
+
+/* =====================
+	University  Area
+========================= */
+.university-in {
+	text-align: center;
+	color: #333;
+}
+.university-in h2 {
+	font-size: 24px;
+	margin-top: 5px;
+}
+.university-in h1 {
+	margin-top: 5px;
+}
+.universit-img img {
+	max-width: 100%;
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+/* =====================
+	Slider Area
+========================= */
+.slider {
+	position: relative;
+}
+
+.slider-item {
+	position: relative;
+}
+.slider-content {
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	color: #fff;
+	top: 50%;
+	z-index: 2;
+	transform: translateY(-50%);
+}
+.slider-item:after {
+	position: absolute;
+	content: '';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, .5);
+	z-index: 0;
+}
+.slider-content h3 {
+	font-size: 36px;
+	text-transform: uppercase;
+}
+.slider-content h1 {
+	font-size: 60px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+.slider-arrow .angle-left, 
+.slider-arrow .angle-right {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	transform: translateY(-50%);
+	font-size: 22px;
+	color: #fff;
+	padding: 40px 10px;
+	background: #333;
+}
+.slider-arrow .angle-left {
+	transition: 1s;
+	left: -100px;
+}
+.slider-arrow .angle-right {
+	transition: 1s;
+	right: -100px
+}
+.slider-arrow .angle-left:hover,
+.slider-arrow .angle-right:hover {
+	background: #1293d4;
+}
+.slider:hover .slider-arrow .angle-left {
+	left: 0;
+}
+
+.slider:hover .slider-arrow .angle-right {
+	right: 0;
+}
+.slider .common-btn {
+	margin-top: 35px;
+}
+
+.slider .carousel-indicators li {
+	height: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+/* =====================
+	About Area
+========================= */
+.about {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.about-content {
+	text-align: center;
+	color: #333;
+}
+.about-content a {
+	display: inline-block;
+	width: 55px;
+	height: 55px;
+	border: 2px solid #343434;
+	color: #333;
+	text-align: center;
+	font-size: 22px;
+	border-radius: 50%;
+	line-height: 2.2;
+	transition: .5s;
+}
+.about-content a:hover {
+	background: #1293d4;
+	color: #fff;
+	border: none;
+}
+.about-content h4 {
+	font-size: 24px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+
+
+
+/* =====================
+	Welcome  Area
+========================= */
+.welcome {
+	background: #00254E;
+}
+.welcome-in {
+	text-align: center;
+	font-style: italic;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 30px;
+	color: #fff;
+}
+
+
+
+/* =====================
+	Registration  Area
+========================= */
+.registration {
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../images/1.jpg);
+}
+.registration-in {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 20px;
+	border-radius: 10px;
+	background: #fff;
+	margin-bottom: 40px;
+}
+.registration-in img{
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+.registration-in p {
+	color: #333;
+	margin-top: 20px;
+	font-size: 22px;
+}
+.login {
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.login input {
+	color: #333;
+	display: inline-block;
+	height: 50px;
+	width: 90%;
+	padding-left: 30px;
+	font-size: 20px;
+}
+.login i {
+	position: absolute;
+	left: 25px;
+	top: 14px;
+	display: inline-block;
+	color: black;
+	font-size: 18px;
+}
+::-webkit-input-placeholder {
+    color:    #333;
+}
+:-moz-placeholder { 
+   color:    #333;
+}
+::-moz-placeholder { 
+   color:    #333;
+}
+:-ms-input-placeholder { 
+   color:    #333;
+}
+::-ms-input-placeholder { 
+   color:    #333;
+}
+
+::placeholder {
+   color:    #333;
+}
+.registration-in .common-btn a {
+	display: inline-block;
+	background: #3d6ad6;
+	margin-top: 20px;
+	transition: .5s;
+
+}
+.registration-in .common-btn a:hover {
+	background: #444;
+	color: #fff;
+}
+.registration-in .common-btn a:hover i {
+	border: 1px solid #fff;
+}
+.registration-in .common-btn i {
+	margin-left: 10px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	line-height: 1.5;
+}
+
+
+
+
+
+
+
