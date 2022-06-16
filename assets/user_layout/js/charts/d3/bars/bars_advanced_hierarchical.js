@@ -41,7 +41,7 @@ $(function () {
 
         // Colors
         var color = d3.scale.ordinal()
-            .range(["#26A69A", "#ccc"]);
+            .range(["#1a6381", "#ccc"]);
 
 
 

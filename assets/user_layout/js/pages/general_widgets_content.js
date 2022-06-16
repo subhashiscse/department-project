@@ -74,7 +74,7 @@ $(function() {
     // Messages area chart
     // ------------------------------
 
-    messagesArea("#messages-stats", 40, '#26A69A'); // initialize chart
+    messagesArea("#messages-stats", 40, '#1a6381'); // initialize chart
 
     // Chart setup
     function messagesArea(element, height, color) {

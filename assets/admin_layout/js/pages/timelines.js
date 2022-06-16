@@ -258,7 +258,7 @@ $(function() {
             title: 'Conference',
             start: '2014-11-11',
             end: '2014-11-13',
-            color: '#26A69A'
+            color: '#1a6381'
         },
         {
             title: 'Meeting',
@@ -274,7 +274,7 @@ $(function() {
         {
             title: 'Happy Hour',
             start: '2014-11-12T14:30:00',
-            color: '#26A69A'
+            color: '#1a6381'
         },
         {
             title: 'Dinner',

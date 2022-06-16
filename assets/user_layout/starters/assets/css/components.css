@@ -350,7 +350,7 @@ a.badge,
 .navigation > li.active > a,
 .navigation > li.active > a:hover,
 .navigation > li.active > a:focus {
-  background-color: #26A69A;
+  background-color: #1a6381;
   color: #fff;
 }
 .navigation > li.active > a > [class*=text-] {
@@ -778,8 +778,8 @@ a.badge,
     position: absolute;
     top: 0;
     right: -260px;
-    background-color: #26A69A;
-    border: 1px solid #26A69A;
+    background-color: #1a6381;
+    border: 1px solid #1a6381;
     padding: 11px 20px;
     width: 260px;
     text-align: left;

@@ -25,7 +25,7 @@ $(function() {
             title: 'Web development',
             start: '2014-11-02',
             end: '2014-11-04',
-            color: '#26A69A'
+            color: '#1a6381'
         },
         {
             title: 'UX design camp',
@@ -37,14 +37,14 @@ $(function() {
             id: 999,
             title: 'Business development',
             start: '2014-11-09',
-            color: '#26A69A'
+            color: '#1a6381'
         },
         {
             id: 999,
             title: 'Business development',
             start: '2014-11-16',
             end: '2014-11-18',
-            color: '#26A69A'
+            color: '#1a6381'
         },
         {
             title: 'Marketing strategy',

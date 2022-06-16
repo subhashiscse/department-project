@@ -254,14 +254,14 @@ $(function () {
                         stack: 'Total',
                         itemStyle: {
                             normal: {
-                                color: '#26a69a',
+                                color: '#1a6381',
                                 label: {
                                     show: true,
                                     position: 'insideRight'
                                 }
                             },
                             emphasis: {
-                                color: '#26a69a',
+                                color: '#1a6381',
                                 label: {
                                     show: true
                                 }

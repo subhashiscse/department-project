@@ -26,33 +26,31 @@
 	<div class="wrapping">
       <!-- University name Area Start -->
       <section class="university">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-1">
-              <div class="universit-img" >
-                <img src="assets/new_layout/images/university.jpg" alt="">
-              </div>
+        <div class="row">
+          <div class="col-md-1">
+            <div class="universit-img" >
+              <img src="assets/new_layout/images/university.jpg" alt="">
             </div>
-            <div class="col-md-10">
-              <div class="university-in" style="border: none;"> 
-                <h1 style="margin-top: 5px;">Department of Computer Science & Engineering</h1>
-                <h2 style="margin-top: 5px;font-weight: bold;text-transform: uppercase;">Islamic University, Bangladesh</h2>
-              </div><!-- ./university-in -->
-            </div>
-            <div class="col-md-1">
-              <div class="btn-group" style="margin-top:65%;margin-left:80%">
-                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Login
-                </button>
-                <div class="dropdown-menu"style="background: #FFB833">
-                  <a style="background: #43976F" class="dropdown-item" href="login_admin">Login as Admin</a>
-                  <a style="background: #A6643E" class="dropdown-item" href="login_teacher">Login as Teacher</a>
-                  <a style="background: #43976F" class="dropdown-item" href="login_student">Login as Student</a>
-                  <a style="background: #A6643E" class="dropdown-item" href="login_stuff">Login as Stuff</a>
-                </div>
-              </div>
           </div>
-        </div><!-- ./container -->
+          <div class="col-md-10">
+            <div class="university-in" style="border: none;"> 
+              <h1 style="margin-top: 5px;">Department of Computer Science & Engineering</h1>
+              <h2 style="margin-top: 5px;font-weight: bold;text-transform: uppercase;">Islamic University, Bangladesh</h2>
+            </div><!-- ./university-in -->
+          </div>
+          <div class="col-md-1">
+            <div class="btn-group" style="margin-top:30%">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </button>
+              <div class="dropdown-menu"style="background: #FFB833">
+                <a style="background: #43976F" class="dropdown-item" href="login_admin">Login as Admin</a>
+                <a style="background: #A6643E" class="dropdown-item" href="login_teacher">Login as Teacher</a>
+                <a style="background: #43976F" class="dropdown-item" href="login_student">Login as Student</a>
+                <a style="background: #A6643E" class="dropdown-item" href="login_stuff">Login as Stuff</a>
+              </div>
+            </div>
+        </div>
       </section><!-- ./university -->
       <!-- University name Area End -->
       <!-- Slider Area Start -->
@@ -63,12 +61,12 @@
                       <div class="overlay-bg"></div>
                       <div class="hero-content">
                           <div class="hero-cont-table-cell">
-                              <div class="container" style="margin-left: 5%">
+                              <div class="container">
                                   <div class="row" >
                                       <div class="col-md-10" >
                                           <h1 >Online Department Design<h1>
-                                          <h1>&</h1>
-                                          <h1 >Development System</h1>
+                                          <h1 >&</h1>
+                                          <h1 >Automation System</h1>
                                       </div>
                                   </div>
                               </div>

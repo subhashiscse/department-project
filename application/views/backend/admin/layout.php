@@ -58,11 +58,11 @@
 		</div>
 
 		<div class="navbar-collapse collapse" id="navbar-mobile">
-			<ul class="nav navbar-nav" style="margin-left:20%">
+			<ul class="nav navbar-nav">
 				<li><a class="sidebar-control sidebar-main-toggle hidden-xs" style="margin-top:15%"><i class="icon-paragraph-justify3"></i></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right" >
-				<li class="dropdown dropdown-user" style="margin-top: 3%;background-color: #538247;border-radius: 5%">
+				<li class="dropdown dropdown-user" style="margin-top: 3%;background-color: #151815;border-radius: 5%">
 					<a class="dropdown-toggle" data-toggle="dropdown">
 						<?php if($data['user_info']->user_image){ ?>
 						<img src="<?php echo base_url('assets/images/'.$data['user_info']->user_image) ?>">

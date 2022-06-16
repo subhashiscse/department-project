@@ -372,13 +372,13 @@ $(function() {
             title: 'Long Event',
             start: '2014-11-07',
             end: '2014-11-10',
-            color: '#26A69A'
+            color: '#1a6381'
         },
         {
             id: 999,
             title: 'Repeating Event',
             start: '2014-11-09T16:00:00',
-            color: '#26A69A'
+            color: '#1a6381'
         },
         {
             id: 999,
