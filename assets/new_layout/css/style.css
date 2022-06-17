@@ -59,9 +59,8 @@ a:hover {
 .university-in h1 {
 	margin-top: 5px;
 }
-.universit-img img {
-	max-width: 100%;
-	margin-top: 20px;
+.university-img img {
+	max-width: 70%;
 }
 
 
@@ -198,8 +197,8 @@ a:hover {
 .welcome-in {
 	text-align: center;
 	font-style: italic;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 4px;
+	padding-bottom: 5px;
 	font-size: 30px;
 	color: #fff;
 }
