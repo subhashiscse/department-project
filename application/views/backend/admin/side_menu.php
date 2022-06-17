@@ -55,6 +55,14 @@
 							</ul>
 						</li>
 						<li>
+							<a href="#"><i class="icon-stack2"></i> <span>Library System</span></a>
+							<ul>
+								<li class="<?php echo $active_nav =="add_book"?"active":""; ?>"><a href="<?php echo base_url('dashboard_admin/addBook') ?>">Add Book</a></li>
+								<li class="<?php echo $active_nav =="assign_book_list"?"active":""; ?>"><a href="<?php echo base_url('dashboard_admin/getAllAssignedBookList') ?>">Assigned Book List</a></li>
+								<li class="<?php echo $active_nav =="book_list"?"active":""; ?>"><a href="<?php echo base_url('dashboard_admin/getBookList') ?>">Book List</a></li>
+							</ul>
+						</li>
+						<li>
 							<a href="#"><i class="icon-stack2"></i> <span>Activites</span></a>
 							<ul>
 								<li class="<?php echo $active_nav =="meetings"?"active":""; ?>"><a href="#">Meetings</a>

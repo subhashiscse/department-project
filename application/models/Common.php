@@ -31,7 +31,16 @@ class Common extends CI_Model {
             return FALSE;
         }
     }
-
+    public function get_data_sort_order_with_where($table, $order_by, $order_type, $index, $data){
+        $this->db->order_by($order_by, $order_type);
+        $this->db->where($index, $data);
+        $query= $this->db->get($table);
+        if($this->db->affected_rows()>0){
+            return $query;
+        }else{
+            return FALSE;
+        }
+    }
     public function get_data_multi_conditional($table,$data){
         $this->db->where($data);
         $query = $this->db->get($table);

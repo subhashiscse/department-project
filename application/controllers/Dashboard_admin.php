@@ -778,6 +778,134 @@ class Dashboard_admin extends CI_Controller
         $this->db->update("session", $data);  
         redirect('dashboard_admin/session_list','location');
    }
+
+
+
+
+
+
+   /* Book Crud*/
+   public function addBook()
+   {
+      $data['active_nav'] = "add_book";
+      $data['side_menu']=$this->load->view('backend/admin/side_menu',$data,TRUE);
+      $data['main_content'] = $this->load->view('backend/admin/dashboard/book_store/add_book',$data,TRUE);
+      $this->load->view('backend/admin/layout',$data);
+   }
+   public function saveBook()
+   {
+      $data = array(
+            'BookName' => trim($this->input->post('BookName')),
+            'BookWriterName' => trim($this->input->post('BookWriterName')),
+            'NumberOfTotalCopy' => trim($this->input->post('NumberOfTotalCopy')),
+            'NumberOfRemainingCopy' => trim($this->input->post('NumberOfTotalCopy')),
+      );
+      $this->Common->set_data("book_list", $data);
+      $this->session->set_flashdata('msg', '<p class="alert alert-success">Insert Successfully</p>');
+      redirect('dashboard_admin/getBookList','location');
+   }
+   public function getBookList()
+   {
+      $data['active_nav'] = "book_list";
+      $data['book_list'] = $this->Common->get_data_sort_order('book_list','BookId','asc');
+      $data['side_menu']=$this->load->view('backend/admin/side_menu',$data,TRUE);
+      $data['main_content'] = $this->load->view('backend/admin/dashboard/book_store/book_list',$data,TRUE);
+      $this->load->view('backend/admin/layout',$data);
+   }
+   public function editBook($BookId)
+   {
+      $data['active_nav'] = "edit_book";
+      $data['book_list'] = $this->db->where("BookId",$BookId)->get("book_list")->row();
+      $data['book_list']->PreviousTotalCopy = $data['book_list']->NumberOfTotalCopy;
+      $data['side_menu']=$this->load->view('backend/admin/side_menu',$data,TRUE);
+      $data['main_content'] = $this->load->view('backend/admin/dashboard/book_store/edit_book',$data,TRUE);
+      $this->load->view('backend/admin/layout',$data);
+   }
+   public function deleteBook($BookId)
+   {
+      $book_list= $this->db->where("BookId",$BookId)->get("book_list")->row();
+      $this->Common->delete_data("book_list",'BookId',$BookId);
+      $this->session->set_flashdata('msg', '<p class="alert alert-success">Delete Successfully</p>');
+      redirect('dashboard_admin/getBookList','location');
+   }
+   public function updateBook($BookId)
+   {
+      $data = array(
+         'BookName' => trim($this->input->post('BookName')),
+         'BookWriterName' => trim($this->input->post('BookWriterName')),
+         'NumberOfTotalCopy' => trim($this->input->post('NumberOfTotalCopy')),
+         'NumberOfRemainingCopy' => trim($this->input->post('NumberOfRemainingCopy')),
+         'PreviousTotalCopy' => trim($this->input->post('PreviousTotalCopy')),
+      );
+      $differenceOfRemainingCopy = $data['NumberOfTotalCopy']- $data['PreviousTotalCopy'];
+      $data['NumberOfRemainingCopy']+= $differenceOfRemainingCopy;
+      $this->db->where("BookId", $BookId);  
+      $this->db->update("book_list", $data);  
+      $this->session->set_flashdata('msg', '<p class="alert alert-success">Update Successfully</p>');
+      redirect('dashboard_admin/getBookList','location');
+   }
+   public function assignBook($BookId)
+   {
+      $data = array(
+            'session' => trim($this->input->post('session')),
+      );
+      $data['active_nav'] = "book_list";
+      $data['assignBookInformation'] = $this->db->where("BookId",$BookId)->get("book_list")->row();
+      $data['side_menu']=$this->load->view('backend/admin/side_menu',$data,TRUE);
+      $data['main_content'] = $this->load->view('backend/admin/dashboard/book_store/assign_book',$data,TRUE);
+      $this->load->view('backend/admin/layout',$data);
+   }
+   public function saveAssignBook(){
+      $data = array(
+         'BookId' => trim($this->input->post('BookId')),
+         'BookName' => trim($this->input->post('BookName')),
+         'BookWriterName' => trim($this->input->post('BookWriterName')),
+         'StudentId' => trim($this->input->post('StudentId')),
+         'StudentName' => trim($this->input->post('StudentName')),
+         'BookIssueDate' => trim($this->input->post('BookIssueDate')),
+         'BookReturnDate' => trim($this->input->post('BookReturnDate')),
+         'IsReturnBook' => trim($this->input->post('IsReturnBook')),
+      );
+      $BookId = trim($this->input->post('BookId'));
+      $book_list= $this->db->where("BookId",$BookId)->get("book_list")->row();
+      $book_list->NumberOfRemainingCopy-=1;
+      /*Create new Entry for book assign*/
+      $this->Common->set_data("book_assign_info", $data);
+      /*Update Book List Info*/
+      $this->updateBookListInfo($book_list, $BookId);
+      $this->session->set_flashdata('msg', '<p class="alert alert-success">Assign Successfully</p>');
+      redirect('dashboard_admin/getBookList','location');
+      
+   }
+
+   public function updateBookListInfo($booklist, $BookId){
+      $this->db->where("BookId", $BookId);  
+      $this->db->update("book_list", $booklist);
+      return;
+   }
+   public function updateAssignBookListInfo($assignedBooklist, $BookAssignId){
+      $this->db->where("BookAssignId", $BookAssignId);  
+      $this->db->update("book_assign_info", $assignedBooklist);
+      return;
+   }
+   public function getAllAssignedBookList(){
+      $data['active_nav'] = "assign_book_list";
+      $data['assigned_book_list'] = $this->Common->get_data_sort_order_with_where('book_assign_info','BookAssignId','asc','IsReturnBook','false');
+      $data['side_menu']=$this->load->view('backend/admin/side_menu',$data,TRUE);
+      $data['main_content'] = $this->load->view('backend/admin/dashboard/book_store/assigned_book_list',$data,TRUE);
+      $this->load->view('backend/admin/layout',$data);
+   }
+   public function unassignBook($BookAssignId){
+      $assignedBookInfo= $this->db->where("BookAssignId",$BookAssignId)->get("book_assign_info")->row();
+      $assignedBookInfo->IsReturnBook = true;
+      $this->updateAssignBookListInfo($assignedBookInfo, $BookAssignId);
+      
+      $BookId = $assignedBookInfo->BookId;
+      $book_list = $this->db->where("BookId",$BookId)->get("book_list")->row();
+      $book_list->NumberOfRemainingCopy+=1;
+      $this->updateBookListInfo($book_list, $BookId);
+      $this->getAllAssignedBookList();
+   }
    ///teacher->start
    public function add_teacher()
    {
@@ -980,7 +1108,7 @@ class Dashboard_admin extends CI_Controller
             'stuff_pass' => md5($this->input->post('stuff_pass')),
             'stuff_phone' => trim($this->input->post('stuff_phone')),
             'stuff_image' => $logo_path,
-        );
+      );
       $this->Common->set_data("stuffs", $data);
       $this->session->set_flashdata('msg', '<p class="alert alert-success">Insert Successfully</p>');
       redirect('dashboard_admin/stuff_list','location');

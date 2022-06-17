@@ -2,26 +2,25 @@
 </script>
 <div class="panel panel-flat">
     <div class="panel-heading">
-        <h5 class="panel-title badge badge-info">Assign Course</h5>
+        <h5 class="panel-title badge badge-info">Add New Book</h5>
         <br><br>
         <?php echo $this->session->flashdata('msg'); ?>                    
     </div>
     <div class="panel-body">
-        <form method="POST" enctype="multipart/form-data" action="<?php echo base_url('dashboard_admin/save_assign_course'); ?>">
+    <form method="POST" enctype="multipart/form-data" action="<?php echo base_url('dashboard_admin/saveBook'); ?>">
             <div class="col-md-8">
                 <div class="form-group">
-                    <label >Session</label>
-                    <select class="form-control" name="session">
-                        <option>None..</option>
-                        <?php foreach ($session_list as $row) {?>
-                            <option><?=$row->session; ?></option>
-                        <?php } ?>
-                    </select>
+                    <label >Book Name</label>
+                    <input type="text"  class="form-control" value="" name="BookName"  required="">
+                </div>
+                <div class="form-group">
+                    <label >Writer Name</label>
+                    <input type="text" class="form-control" value="" name="BookWriterName"  required="">
                 </div>
                 
                 <div class="form-group">
-                    <label >Course No</label>
-                    <input type="text" class="form-control" value="" name="course_no"  required="">
+                    <label >Number Of Total Copy</label>
+                    <input type="number" class="form-control" value="" name="NumberOfTotalCopy"  required="">
                 </div>
                 <button type="submit" class="btn btn-success">Submit</button>
             </div>    

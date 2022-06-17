@@ -28,7 +28,7 @@
       <section class="university">
         <div class="row">
           <div class="col-md-1">
-            <div class="universit-img" >
+            <div class="university-img" >
               <img src="assets/new_layout/images/university.jpg" alt="">
             </div>
           </div>
