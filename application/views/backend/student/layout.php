@@ -39,6 +39,10 @@
 	<script src="<?php echo base_url('assets/user_layout/js/sweetalert.min.js') ?>"></script>
 	<script src="<?php echo base_url('assets/user_layout/js/jquery.form-validator.min.js') ?>"></script>
 	<!-- /theme JS files -->
+	<?php 
+        $student_id = $this->session->userdata('student_id');
+        $data['student_info']=$this->db->where('student_id',$student_id)->get('students')->row();
+	?>
 </head>
 <body>
 	<!-- Main navbar -->

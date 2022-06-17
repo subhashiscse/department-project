@@ -123,4 +123,14 @@ class Common extends CI_Model {
         $result = $this->db->get('project_features')->result();
         return $result;
     }
+    public function getAllIssuedBookList($table, $order_by, $order_type, $index, $data){
+        $this->db->order_by($order_by, $order_type,'IsReturnType',false);
+        $this->db->where($index, $data);
+        $query= $this->db->get($table);
+        if($this->db->affected_rows()>0){
+            return $query;
+        }else{
+            return FALSE;
+        }
+    }
 }

@@ -1,3 +1,8 @@
+<?php 
+	$student_id = $this->session->userdata('student_id');
+	$data['student_info']=$this->db->where('student_id',$student_id)->get('students')->row();
+?>
+
 <div class="sidebar sidebar-main">
 	<div class="sidebar-content">
 	<!-- User menu -->
@@ -35,6 +40,13 @@
 							<a href="#"><i class="icon-stack2"></i> <span>Exam Information</span></a>
 							<ul>
 								<li class="<?php echo $active_nav =="exam_routine"?"active":""; ?>"><a href="<?php echo base_url('dashboard_student/exam_routine') ?>">Exam Routine</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="icon-stack2"></i> <span>Library System</span></a>
+							<ul>
+								<li class="<?php echo $active_nav =="book_list"?"active":""; ?>"><a href="<?php echo base_url('dashboard_student/getBookList') ?>">Book List</a></li>
+								<li class="<?php echo $active_nav =="issued_book_list"?"active":""; ?>"><a href="<?php echo base_url('dashboard_student/getAllIssuedBookList') ?>">Issued Book</a></li>
 							</ul>
 						</li>
 						<li>
