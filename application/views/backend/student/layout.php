@@ -56,19 +56,19 @@
 		</div>
 
 		<div class="navbar-collapse collapse" id="navbar-mobile">
-			<ul class="nav navbar-nav"  style="margin-left:20%">
+			<ul class="nav navbar-nav">
 				<li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown dropdown-user" style="margin-top: 3%;background-color: #151815;border-radius: 5%">
 					<a class="dropdown-toggle" data-toggle="dropdown">
-						<?php if($student_info->student_image){ ?>
-						<img src="<?php echo base_url('assets/images/'.$student_info->student_image) ?>">
+						<?php if($data['student_info']->student_image){ ?>
+						<img src="<?php echo base_url('assets/images/'.$data['student_info']->student_image) ?>">
 						<?php } 
 						else {?>
 							<img src="<?php echo base_url('assets/images/person.JPG') ?>">
 						<?php } ?>
-						<span><?= $student_info->student_username;?></span>
+						<span><?= $data['student_info']->student_username;?></span>
 						<i class="caret"></i>
 					</a>
 

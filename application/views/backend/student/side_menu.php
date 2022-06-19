@@ -9,8 +9,8 @@
 		<div class="sidebar-user">
 			<div class="category-content">
 				<div class="media">
-					<?php if($student_info->student_image){ ?>
-					<a href="#" class="media-left"><img style="width:150px;height:150px; border-radius: 15px;"src="<?php echo base_url('assets/images/'.$student_info->student_image) ?>" alt=""></a>
+					<?php if($data['student_info']->student_image){ ?>
+					<a href="#" class="media-left"><img style="width:150px;height:150px; border-radius: 15px;"src="<?php echo base_url('assets/images/'.$data['student_info']->student_image) ?>" alt=""></a>
 					<?php }
 					else { ?>
 						<a href="#" class="media-left"><img style="width:150px;height:150px; border-radius: 15px;"src="<?php echo base_url('assets/images/person.JPG') ?>" alt=""></a>

@@ -197,12 +197,12 @@ class Dashboard_student extends CI_Controller
       $data['main_content'] = $this->load->view('backend/student/dashboard/book_store/book_list',$data,TRUE);
       $this->load->view('backend/student/layout',$data);
     }
-    public function getIssuedBookList()
+    public function getAllIssuedBookList()
     {
       $data['active_nav'] = "issued_book_list";
       $StudentId = $this->session->userdata('student_id');
       $data['issued_book_list'] = $this->Common->getAllIssuedBookList('book_assign_info','BookId','asc','StudentId',$StudentId);
-      $data['side_menu']=$this->load->view('backend/s/side_menu',$data,TRUE);
+      $data['side_menu']=$this->load->view('backend/student/side_menu',$data,TRUE);
       $data['main_content'] = $this->load->view('backend/student/dashboard/book_store/issued_book_list',$data,TRUE);
       $this->load->view('backend/student/layout',$data);
     }
