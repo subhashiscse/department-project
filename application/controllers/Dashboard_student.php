@@ -206,4 +206,4 @@ class Dashboard_student extends CI_Controller
       $data['main_content'] = $this->load->view('backend/student/dashboard/book_store/issued_book_list',$data,TRUE);
       $this->load->view('backend/student/layout',$data);
     }
-}
+}#00254E

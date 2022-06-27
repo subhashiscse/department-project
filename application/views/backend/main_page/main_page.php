@@ -43,11 +43,11 @@
               <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Login
               </button>
-              <div class="dropdown-menu"style="background: #FFB833">
-                <a style="background: #43976F" class="dropdown-item" href="login_admin">Login as Admin</a>
-                <a style="background: #A6643E" class="dropdown-item" href="login_teacher">Login as Teacher</a>
-                <a style="background: #43976F" class="dropdown-item" href="login_student">Login as Student</a>
-                <a style="background: #A6643E" class="dropdown-item" href="login_stuff">Login as Stuff</a>
+              <div class="dropdown-menu"style="background: #00254E">
+                <a style="background: #00254E;color:white" class="dropdown-item" href="login_admin">Login as Admin</a>
+                <a style="background: #00254E;color:white" class="dropdown-item" href="login_teacher">Login as Teacher</a>
+                <a style="background: #00254E;color:white" class="dropdown-item" href="login_student">Login as Student</a>
+                <a style="background: #00254E;color:white" class="dropdown-item" href="login_stuff">Login as Stuff</a>
               </div>
             </div>
         </div>
@@ -64,9 +64,8 @@
                               <div class="container">
                                   <div class="row" >
                                       <div class="col-md-10" >
-                                          <h1 >Online Department Design<h1>
-                                          <h1 >&</h1>
-                                          <h1 >Automation System</h1>
+                                          <h1>Online Department<h1>
+                                          <h1>Automation System</h1>
                                       </div>
                                   </div>
                               </div>

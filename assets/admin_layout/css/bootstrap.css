@@ -6554,6 +6554,14 @@ button.close {
 .visible-lg-inline-block {
   display: none !important;
 }
+
+.bacground-00254E{
+  background-color: #00254E;
+}
+.bg-00254E{
+  background-color: #00254E;
+  color: white;
+}
 @media (max-width: 768px) {
   .visible-xs {
     display: block !important;

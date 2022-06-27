@@ -42,11 +42,11 @@
 				<div class="dropdown">
 					<button style="margin: 15%" class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Login
 					<span class="caret"></span></button>
-					<ul class="dropdown-menu" style="background: #FFB833">
-					    <li style="background: #43976F"><a href="login_admin">Login as Admin</a></li>
-					    <li style="background: #A6643E"><a href="login_teacher">Login as Teacher</a></li>
-					    <li style="background: #43976F"><a href="login_student">Login as Student</a></li>
-					    <li style="background: #A6643E"><a href="login_stuff">Login as Stuff</a></li>
+					<ul class="dropdown-menu bacground-00254E">
+						<li><a class="bg-00254E" href="login_admin">Login as Admin</a></li>
+					    <li><a class="bg-00254E" href="login_teacher">Login as Teacher</a></li>
+					    <li><a class="bg-00254E" href="login_student">Login as Student</a></li>
+					    <li><a class="bg-00254E" href="login_stuff">Login as Stuff</a></li>
 					</ul>
 				</div>
 			</ul>
