@@ -39,7 +39,7 @@
 		<div class="navbar-collapse collapse" id="navbar-mobile">
 			<ul class="nav navbar-nav navbar-right">
 				<div class="dropdown">
-					<button style="margin: 15%" class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Login
+					<button style="margin: 15%" class="btn btn-success dropdown-toggle login-button" type="button" data-toggle="dropdown">Login
 					<span class="caret"></span></button>
 					<ul class="dropdown-menu bacground-00254E">
 						<li><a class="bg-00254E" href="login_admin">Login as Admin</a></li>

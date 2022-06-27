@@ -6560,7 +6560,12 @@ button.close {
 }
 .bg-00254E{
   background-color: #00254E;
-  color: white;
+  color: white !important;
+  font-size: 14px;
+}
+.login-button{
+  margin: 15%;
+  font-size: 14px;
 }
 @media (max-width: 768px) {
   .visible-xs {
